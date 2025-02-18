@@ -19,3 +19,12 @@ total_paym = savings + rent + electricity
 sal_remainder = month_sal - total_paym 
 year_rent_elec = (rent + electricity) * len(months)
 sal_squared = month_sal ** 2
+
+add_savings = float(input("Enter the additional savings if exist(in $) if not enter 0: "))
+
+if savings != 0:
+    add_result = add_savings / savings
+    add_remainder = add_savings % savings
+else:
+    add_result = 0
+    add_remainder = 0
