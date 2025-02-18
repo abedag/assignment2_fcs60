@@ -39,4 +39,6 @@ print(f"Savings: {savings}$ --> {inp_savings}%")
 print(f"Rent: {rent}$ --> {inp_rent}%")
 print(f"Electricity: {electricity}$ --> {inp_electricity}%")
 print(f"Total payment: {total_paym}$")
-
+print(f"Remainder: {sal_remainder}$")
+print(f"Yearly payment(Rent & Electricity): {year_rent_elec}$")
+print(f"Salary squared: {sal_squared}$ (Just for fun)")
