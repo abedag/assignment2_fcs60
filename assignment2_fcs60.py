@@ -10,3 +10,7 @@ print("Enter the percentage of each of the following payments:")
 inp_savings = int(input("Savings:"))
 inp_rent = int(input("Rent:"))
 inp_electricity = int(input("Electricity:"))
+
+savings = float((inp_savings / 100) * month_sal)
+rent = float((inp_rent / 100) * month_sal)
+electricity = float((inp_electricity / 100) * month_sal)
