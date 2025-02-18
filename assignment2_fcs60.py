@@ -6,6 +6,10 @@ months = ["january","february","march","april","may","june","july",
 month_sal = int(input("Enter the salary of the month in $: "))
 month_name = input("Enter the name of the month: ")
 
+while month_name.lower() not in months:
+    print("Month entered doesn't exist.Try again")
+    month_name = input("Enter the name of the month: ")
+
 print("Enter the percentage of each of the following payments:")
 inp_savings = int(input("Savings:"))
 inp_rent = int(input("Rent:"))
