@@ -32,3 +32,6 @@ if savings != 0:
 else:
     add_result = 0
     add_remainder = 0
+
+print(f"\n---Financial Summary for {month_name}---")
+print(f"Salary: {month_sal}$")
