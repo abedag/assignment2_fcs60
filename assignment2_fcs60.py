@@ -35,3 +35,8 @@ else:
 
 print(f"\n---Financial Summary for {month_name}---")
 print(f"Salary: {month_sal}$")
+print(f"Savings: {savings}$ --> {inp_savings}%")
+print(f"Rent: {rent}$ --> {inp_rent}%")
+print(f"Electricity: {electricity}$ --> {inp_electricity}%")
+print(f"Total payment: {total_paym}$")
+
