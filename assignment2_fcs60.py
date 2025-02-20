@@ -30,7 +30,8 @@ while True:
     if inp_rent.replace(".", "", 1).isdigit():
         rent_percent = float(inp_rent)
         break
-
+    else:
+        print("Invalid input. Please enter a valid percentage.")
 
 inp_electricity = int(input("Electricity (Without typing %):"))
 
