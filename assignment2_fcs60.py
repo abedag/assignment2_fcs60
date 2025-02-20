@@ -3,7 +3,13 @@ print("Nabiha's Salary")
 months = ["january","february","march","april","may","june","july",
 "august","september","october","november","december"]
 
-month_sal = int(input("Enter the salary of the month in $: "))
+while True:
+    month_sal = input("Enter the salary of the month in $: ")
+    if month_sal.replace(".", "", 1).isdigit():
+        salary = float(month_sal)
+        break
+
+
 month_name = input("Enter the name of the month: ")
 
 while month_name.lower() not in months:
