@@ -56,7 +56,8 @@ while True:
     if add_savings.replace(".", "", 1).isdigit():
         a_savings = float(add_savings)
         break
-
+    else:
+        print("Invalid input. Please enter a valid number")
 
 if savings != 0:
     add_result = a_savings / savings
