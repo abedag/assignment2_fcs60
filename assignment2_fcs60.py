@@ -34,21 +34,21 @@ while True:
         print("Invalid input. Please enter a valid percentage.")
 
 while True:
-    inp_electricity = input("Electricity (Without typing %):")
+    inp_electricity = input("Electricity (Without typing %):")  
     if inp_electricity.replace(".", "", 1).isdigit():
         electricity_percent = float(inp_electricity)
         break
     else:
         print("Invalid input. Please enter a valid percentage.")
 
-savings = (savings_percent / 100) * month_sal
-rent = (rent_percent / 100) * month_sal
-electricity = (inp_electricity / 100) * month_sal
+savings = (savings_percent / 100) * salary
+rent = (rent_percent / 100) * salary
+electricity = (electricity_percent / 100) * salary
 
 total_paym = savings + rent + electricity
-sal_remainder = month_sal - total_paym 
+sal_remainder = salary - total_paym 
 year_rent_elec = (rent + electricity) * len(months)
-sal_squared = month_sal ** 2
+sal_squared = salary ** 2
 
 add_savings = float(input("Enter the additional savings if exist(in $) if not enter 0: "))
 
@@ -60,14 +60,14 @@ else:
     add_remainder = 0
 
 print(f"\n---Financial Summary for {month_name}---")
-print(f"Salary: {month_sal}$")
-print(f"Savings: {savings}$ --> {inp_savings}%")
-print(f"Rent: {rent}$ --> {inp_rent}%")
-print(f"Electricity: {electricity}$ --> {inp_electricity}%")
-print(f"Total payment: {total_paym}$")
-print(f"Remainder: {sal_remainder}$")
-print(f"Yearly payments(Rent & Electricity): {year_rent_elec}$")
-print(f"Salary squared: {sal_squared}$ (Just for fun)")
-print(f"The division of {add_savings}$ by {add_remainder}$ is: {add_result}")
-print(f"Remainder after division:{add_remainder}$")
+print(f"Salary: {salary:.2f}$")
+print(f"Savings: {savings:.2f}$ --> {savings_percent:.2f}%")
+print(f"Rent: {rent:.2f}$ --> {rent_percent:.2f}%")
+print(f"Electricity: {electricity:.2f}$ --> {electricity_percent:.2f}%")
+print(f"Total payment: {total_paym:.2f}$")
+print(f"Remainder: {sal_remainder:.2f}$")
+print(f"Yearly payments(Rent & Electricity): {year_rent_elec:.2f}$")
+print(f"Salary squared: {sal_squared:.2f}$ (Just for fun)")
+print(f"The division of {add_savings:.2f}$ by {add_remainder:.2f}$ is: {add_result:.2f}")
+print(f"Remainder after division:{add_remainder:.2f}$")
 print("---Salary Covered---\n")
