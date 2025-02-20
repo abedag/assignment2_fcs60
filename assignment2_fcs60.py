@@ -38,7 +38,8 @@ while True:
     if inp_electricity.replace(".", "", 1).isdigit():
         electricity_percent = float(inp_electricity)
         break
-
+    else:
+        print("Invalid input. Please enter a valid percentage.")
 
 savings = (savings_percent / 100) * month_sal
 rent = (rent_percent / 100) * month_sal
