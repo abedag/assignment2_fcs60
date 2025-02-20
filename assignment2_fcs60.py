@@ -1,8 +1,10 @@
 print("Nabiha's Salary")
 
+# List of months to validate user input
 months = ["january","february","march","april","may","june","july",
 "august","september","october","november","december"]
 
+# Loop to ensure valid salary input
 while True:
     month_sal = input("Enter the salary of the month in $: ")
     if month_sal.replace(".", "", 1).isdigit():
@@ -13,18 +15,22 @@ while True:
 
 month_name = input("Enter the name of the month: ")
 
+# Loop to ensure valid month name input
 while month_name.lower() not in months:
     print("Month entered doesn't exist. Please Try again")
     month_name = input("Enter the name of the month: ")
 
 print("Enter the percentage of each of the following payments:")
 
+# Validation of percentage inputs:
+# Savings
 while True:
     inp_savings = input("Savings (Without typing %):")
     if inp_savings.replace(".", "", 1).isdigit():
         savings_percent = float(inp_savings)
         break
 
+# Rent
 while True:
     inp_rent = input("Rent (Without typing %):")
     if inp_rent.replace(".", "", 1).isdigit():
@@ -33,6 +39,7 @@ while True:
     else:
         print("Invalid input. Please enter a valid percentage.")
 
+# Electricity
 while True:
     inp_electricity = input("Electricity (Without typing %):")  
     if inp_electricity.replace(".", "", 1).isdigit():
@@ -41,16 +48,18 @@ while True:
     else:
         print("Invalid input. Please enter a valid percentage.")
 
+# Calculate expenses based on percentage
 savings = (savings_percent / 100) * salary
 rent = (rent_percent / 100) * salary
 electricity = (electricity_percent / 100) * salary
 
+# Calculate totals and remainder
 total_paym = savings + rent + electricity
 sal_remainder = salary - total_paym 
 year_rent_elec = (rent + electricity) * len(months)
-sal_squared = salary ** 2
+sal_squared = salary ** 2 # Just for fun calculation
 
-
+# Loop to get additional savings input
 while True:
     add_savings = input("Enter the additional savings if exist(in $) if not enter 0: ")
     if add_savings.replace(".", "", 1).isdigit():
@@ -59,6 +68,7 @@ while True:
     else:
         print("Invalid input. Please enter a valid number")
 
+# Handle division and remainder safely
 if savings != 0:
     add_result = a_savings / savings
     add_remainder = a_savings % savings
@@ -66,6 +76,7 @@ else:
     add_result = 0
     add_remainder = 0
 
+# Display financial summary
 print(f"\n---Financial Summary for {month_name}---")
 print(f"Salary: {salary:.2f}$")
 print(f"Savings: {savings:.2f}$ --> {savings_percent:.2f}%")
