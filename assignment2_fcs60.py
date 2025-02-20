@@ -33,11 +33,11 @@ while True:
     else:
         print("Invalid input. Please enter a valid percentage.")
 
-inp_electricity = int(input("Electricity (Without typing %):"))
+inp_electricity = input("Electricity (Without typing %):")
 
-savings = float((inp_savings / 100) * month_sal)
-rent = float((inp_rent / 100) * month_sal)
-electricity = float((inp_electricity / 100) * month_sal)
+savings = (savings_percent / 100) * month_sal
+rent = (rent_percent / 100) * month_sal
+electricity = (inp_electricity / 100) * month_sal
 
 total_paym = savings + rent + electricity
 sal_remainder = month_sal - total_paym 
