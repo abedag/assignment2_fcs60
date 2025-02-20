@@ -14,7 +14,7 @@ while True:
 month_name = input("Enter the name of the month: ")
 
 while month_name.lower() not in months:
-    print("Month entered doesn't exist.Try again")
+    print("Month entered doesn't exist. Please Try again")
     month_name = input("Enter the name of the month: ")
 
 print("Enter the percentage of each of the following payments:")
