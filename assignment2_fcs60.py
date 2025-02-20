@@ -50,11 +50,17 @@ sal_remainder = salary - total_paym
 year_rent_elec = (rent + electricity) * len(months)
 sal_squared = salary ** 2
 
-add_savings = float(input("Enter the additional savings if exist(in $) if not enter 0: "))
+
+while True:
+    add_savings = input("Enter the additional savings if exist(in $) if not enter 0: ")
+    if add_savings.replace(".", "", 1).isdigit():
+        a_savings = float(add_savings)
+        break
+
 
 if savings != 0:
-    add_result = add_savings / savings
-    add_remainder = add_savings % savings
+    add_result = a_savings / savings
+    add_remainder = a_savings % savings
 else:
     add_result = 0
     add_remainder = 0
@@ -68,6 +74,6 @@ print(f"Total payment: {total_paym:.2f}$")
 print(f"Remainder: {sal_remainder:.2f}$")
 print(f"Yearly payments(Rent & Electricity): {year_rent_elec:.2f}$")
 print(f"Salary squared: {sal_squared:.2f}$ (Just for fun)")
-print(f"The division of {add_savings:.2f}$ by {add_remainder:.2f}$ is: {add_result:.2f}")
+print(f"The division of {a_savings:.2f}$ by {add_remainder:.2f}$ is: {add_result:.2f}")
 print(f"Remainder after division:{add_remainder:.2f}$")
 print("---Salary Covered---\n")
