@@ -8,7 +8,8 @@ while True:
     if month_sal.replace(".", "", 1).isdigit():
         salary = float(month_sal)
         break
-
+    else:
+        print("Invalid input. Please enter a valid number")
 
 month_name = input("Enter the name of the month: ")
 
