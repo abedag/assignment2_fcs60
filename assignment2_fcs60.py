@@ -24,7 +24,8 @@ while True:
     if inp_savings.replace(".", "", 1).isdigit():
         savings_percent = float(inp_savings)
         break
-
+    else:
+        print("Invalid input. Please enter a valid percentage.")
 
 inp_rent = int(input("Rent:"))
 inp_electricity = int(input("Electricity:"))
