@@ -18,7 +18,14 @@ while month_name.lower() not in months:
     month_name = input("Enter the name of the month: ")
 
 print("Enter the percentage of each of the following payments:")
-inp_savings = int(input("Savings:"))
+
+while True:
+    inp_savings = input("Savings (Without typing %):")
+    if inp_savings.replace(".", "", 1).isdigit():
+        savings_percent = float(inp_savings)
+        break
+
+
 inp_rent = int(input("Rent:"))
 inp_electricity = int(input("Electricity:"))
 
